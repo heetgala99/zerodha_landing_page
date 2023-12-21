@@ -1,0 +1,90 @@
+#navigation-bar {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 10px 1px 10px #ccc;
+}
+
+.navigators {
+    display: flex;
+}
+
+/* All the contents inside the navigators options */
+.navigators * {
+    padding: 10px 20px 10px;
+}
+
+.navigators a {
+    font-size: 14;
+    text-decoration: none;
+    color: rgb(113, 107, 107);
+}
+
+.content-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.content-info h1{
+    font-size: 40px;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
+.content-info button{
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    background-color: #187CD0;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Interest Calculator */
+
+#interest-calculator {
+    margin: 100px 150px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#interest-calculator .title{
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+.calculator-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-left * {
+    padding: 10px;
+}
+
+.form-right * {
+    padding: 10px;
+}
+
+.form-right .calculated-value{
+    display: flex;
+    justify-content: center;
+}
+
+.form-left .label-input{
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculate-button button{
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    background-color: #187CD0;
+    border-radius: 10px;
+    border: none;
+}

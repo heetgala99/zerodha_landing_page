@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zerodha</title>
+
+    <!-- Add the favicon image -->
+    <link rel="icon" href="../assets/images/navigation-icon.png" type="image/x-icon">
+
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="../css/zerodha.css">
+
+    <!-- Link to the external JavaScript file -->
+    <script type="module">
+        import { onCalculate } from '../js/calculator.js';
+
+        // Get the button element
+        const button = document.getElementById('calculate');
+
+        // Add event listener to the button
+        button.addEventListener('click', async () => {
+            // Call the add function when the button is clicked
+            await onCalculate();
+            
+            // Display the result (optional)
+            alert('Interest and Values are calculated');
+        });
+    </script>
+</head>
+<body>
+    <div id="navigation-bar">
+        <div class="app-icon">
+            <a href="./zerodha.html"><img width="200" src="./../assets/images/zerodha.png"/></a>
+        </div>
+        <div class="navigators">
+            <a href="./signup.html" target="_blank">SignUp</a>
+            <a href="./about.html" target="_blank">About</a>
+            <a href="./products.html" target="_blank">Products</a>
+            <a href="./pricing.html" target="_blank">Pricing</a>
+            <a href="./support.html" target="_blank">Support</a>
+            <img width="20" src="./../assets/images/navigation-icon.png"/>
+        </div>
+    </div>
+    <div id="detail-information">
+        <div class="content-info">
+            <img width="1200" src="https://zerodha.com/static/images/landing.png" alt="zerodha landing page" />
+        </div>
+        <div class="content-info">
+            <h1>Invest in everything</h1>
+        </div>
+        <div class="content-info">
+            <p>Online platform to invest in stocks, derivatives, mutual funds, and more</p>
+        </div>
+        <div class="content-info">
+            <button type="submit" onclick="location.href='./signup.html'"> Sign Up now </button>
+        </div>
+    </div>
+    <div id="interest-calculator">
+        <div class="title">
+            <h3>Interest Calculator</h3>
+        </div>
+        <div class="form-content">
+            <form class="calculator-form">
+                <div class="form-left">
+                    <div class="label-input">
+                        <label for="capital" class="label">Capital</label>
+                        <input type="number" placeholder="Rs 0" id="capital" name="capital" class="input-value">
+                    </div>
+                    <div class="label-input">
+                        <label for="years" class="label">Years</label>
+                        <input type="number" placeholder="Rs 0" id="years" name="years" class="input-value">
+                    </div>
+                    <div class="label-input">
+                        <label for="interest" class="label">Interest Rate</label>
+                        <input type="number" placeholder="in %" id="interest-rate" name="interest" class="input-value">
+                    </div>
+                </div>
+                <div class="form-right">
+                    <div class="radio-options">
+                        <input type="radio" id="simple-interest" name="interest" value="Simple Interest" checked>
+                        <label for="simple-interest"> Simple Interest </label>
+                        <input type="radio" id="compound-interest" name="interest" value="Compound Interest">
+                        <label for="compound-interest"> Compound Interest </label>
+                    </div>
+                    <div class="calculated-value">
+                        <div>Total Interest</div>
+                        <div id="output-interest">Rs 0</div>
+                    </div>
+                    <div class="calculated-value">
+                        <div>Total Compensation</div>
+                        <div id="output-value">Rs 0</div>
+                    </div>
+                </div>
+            </form>
+            <div class="calculate-button">
+                <button type="submit" id="calculate">
+                    Calculate
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
